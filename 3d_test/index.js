@@ -22,8 +22,9 @@ scene.add(light);
 
 // Load GLTF model
 let loader = new GLTFLoader();
-loader.load('phoenixbot/scene.gltf', function(gltf) {
+loader.load('shiba/scene.gltf', function(gltf) {
   scene.add(gltf.scene);
+
   function animate() {
     requestAnimationFrame(animate);
     gltf.scene.rotation.y -= 0.005;
