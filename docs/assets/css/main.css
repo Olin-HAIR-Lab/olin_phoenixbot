@@ -5,10 +5,49 @@
 	Arcana by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    
 */
 
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 40px; /* Place the button at the bottom of the page */
+    right: 40px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #6cdea3; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 10px; /* Rounded corners */
+    font-family: inherit;
+    font-size: 100%;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Align items at the bottom */
+}
+
+.image.featured.right {
+    margin: 0 1.5em 0 0; /* Margin to the right for spacing */
+    max-width: 50%;
+}
+
+.image.featured.left {
+    margin: 0 0 0 1.5em; /* Margin to the left for spacing */
+    max-width: 50%;
+}
+
+.text-content {
+    max-width: 50%; /* Ensure the text content doesn't exceed 50% of the container */
+}
+
 canvas {
-    padding: -100px;
     display: block;
 }
 
@@ -1727,9 +1766,28 @@ header p {
     margin-bottom: 2.25em;
 }
 
-header.major {
+header.model {
     text-align: center;
     margin: 0 0 -100px 0;
+}
+
+header.model h2 {
+    font-size: 2.25em;
+}
+
+header.model p {
+    position: relative;
+    border-top: solid 1px #e0e0e0;
+    padding: 1em 0 0 0;
+    margin: 0;
+    top: -1em;
+    font-size: 1.5em;
+    letter-spacing: -0.025em;
+}
+
+header.major {
+    text-align: center;
+    margin: 0 0 -0 0;
 }
 
 header.major h2 {
@@ -2491,7 +2549,7 @@ button.small,
 /* Wrapper */
 
 .wrapper {
-    padding: 5em 0 3em 0;
+    padding: 3em 0 3em 0;
 }
 
 .wrapper.style1 {
