@@ -120,7 +120,7 @@
 
 .flex-container {
     display: flex;
-    align-items: center; /* Align items at the bottom */
+    align-items: top /* Align items at the top */
 }
 
 .image.featured.right {
@@ -360,15 +360,6 @@ b {
 em,
 i {
     font-style: italic;
-}
-
-p,
-ul,
-ol,
-dl,
-table,
-blockquote {
-    margin: 0 0 2em 0;
 }
 
 h1,
