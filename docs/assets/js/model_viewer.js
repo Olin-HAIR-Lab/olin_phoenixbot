@@ -32,7 +32,7 @@ loader.load('models/phoenixbot.gltf', function(gltf) {
 
   function animate() {
     requestAnimationFrame(animate);
-    gltf.scene.rotation.z -= 0.003;
+    gltf.scene.rotation.z -= 0.005;
     renderer.render(scene, camera);
   }
   animate();
