@@ -8,6 +8,8 @@
     
 */
 
+
+/* Added */
 #myBtn {
     display: none; /* Hidden by default */
     position: fixed; /* Fixed/sticky position */
@@ -51,6 +53,8 @@ canvas {
     display: block;
 }
 
+
+/* General */
 html,
 body,
 div,
@@ -2496,6 +2500,58 @@ button.small,
     font-size: 0.9em;
     padding-top: 0;
     margin-top: -1px;
+}
+
+/* Team Page */
+.team-section {
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.team-section h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.team-member {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.team-member h3 {
+    color: #333;
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    color: #777;
+    margin: 0;
+}
+
+.team-member .role {
+    font-weight: bold;
+    color: #555;
+    margin: 10px 0;
 }
 
 
