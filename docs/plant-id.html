@@ -48,9 +48,6 @@
             </nav>
         </div>
 
-        <!-- Banner -->
-        <!-- <section id="banner"></section> -->
-
         <!-- Gigantic Heading -->
         <section class="wrapper style2">
             <div class="container">
@@ -77,14 +74,15 @@
                 <div id="content">
                     <!-- Content -->
                     <article class="flex-container">
-                        <span class="image featured right"><img src="images/banner.jpg" alt="" /></span>
+                        <!-- orig -> green -> binary -> denoise -> cluster -> bbox -->
+                        <span class="image featured right"><img src="images/img-placeholder.png" alt="" /></span>
                         <div class="text-content">
-                            <h3>Topic 1</h3>
+                            <h3>Segmentation</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                To distinguish crops from weeds, we implemented a plant segmentation pipeline using a color-based approach combined with DBSCAN clustering.
+                                Initially, HSV thresholding isolates green pixels in the image. The image is then converted to binary, with green pixels as white and everything else
+                                as black. To reduce noise, morphological operations are applied: a 3x3 opening operation and a 10x10 closing operation. 
+                                Finally, DBSCAN groups the white areas into clusters, with each cluster representing a different plant.
                             </p>
                         </div>
                     </article>
@@ -98,16 +96,13 @@
                     <article class="flex-container">
                         
                         <div class="text-content">
-                            <h3>Topic 2</h3>
+                            <h3>Classification</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                Once different plants are identified from the segmentation pipeline, 
                             </p>
                         </div>
 
-                        <span class="image featured left"><img src="images/banner.jpg" alt="" /></span>
+                        <span class="image featured left"><img src="images/img-placeholder.png" alt="" /></span>
                     </article>
                 </div>
         </section>
@@ -117,9 +112,9 @@
                 <div id="content">
                     <!-- Content -->
                     <article class="flex-container">
-                        <span class="image featured right"><img src="images/banner.jpg" alt="" /></span>
+                        <span class="image featured right"><img src="images/img-placeholder.png" alt="" /></span>
                         <div class="text-content">
-                            <h3>Topic 3</h3>
+                            <h3>Localization</h3>
                             <p>
                                 Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
                                 Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
