@@ -14,7 +14,12 @@
 }
 
 .img-container{
+    margin: 0 auto;
     text-align: center;
+}
+
+.img-container p{
+    padding: 0.2em;
 }
 
 .gallery-section {
