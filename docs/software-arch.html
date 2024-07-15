@@ -52,24 +52,24 @@
             <div class="container">
                 <header class="major">
                     <h2>Software Architecture</h2>
+                    <p>Phoenixbot's software system consists of various ROS2 nodes and serial connections that communicate with each other. The system is divided into two subsystems: Weeder and Navigator.</p>
                 </header>
             </div>
             <div class="img-container" style="width: 55%;">
-                <img src="images/system-diagram/software-arch.png" width="100%" alt="img">
-                <p style="text-align: left;">
-                    The diagram above illustrates all the ROS2 nodes and serial connections that constitute Phoenixbot's software system and their intercommunication. 
-                    The system is divided into two subsystems: Weeder and Navigator.
-                </p>
+                <img src="images/system-diagram/weeder-arch.png" width="100%" alt="img">
                 <p style="text-align: left;">
                     <b>Weeder:</b> This subsystem identifies weeds in camera frames and uses the weeder arm to remove them.
                 </p>
+            </div>
+            <div class="img-container" style="width: 55%;">
+                <img src="images/system-diagram/navigator-arch.png" width="100%" alt="img">
                 <p style="text-align: left;">
                     <b>Navigator:</b> Responsible for autonomous crop following, this subsystem communicates with various sensors and inputs that influence the robot's movement.
                 </p>
             </div>
         </section>
        
-
+                
 
 
         <!-- Footer -->
