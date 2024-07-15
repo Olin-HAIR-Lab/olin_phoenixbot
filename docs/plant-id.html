@@ -53,7 +53,6 @@
             <div class="container">
                 <header class="major">
                     <h2>Plant Identification</h2>
-                    <p>Lorem Ipsum</p>
                 </header>
 
                 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -98,7 +97,10 @@
                         <div class="text-content">
                             <h3>Classification</h3>
                             <p>
-                                Once different plants are identified from the segmentation pipeline, 
+                                Once different plants are identified from the segmentation pipeline, each plant is cropped from the image and processed through 
+                                a pre-trained neural network from Pl@ntNet (<a href="https://inria.hal.science/hal-03474556/" target="_blank" rel="noopener noreferrer">Garcin et al., 2021</a>). 
+                                We selected the ResNet18 model, which has 3000 different plant species it can identify. To minimize false negatives, a list of expected crops is defined. 
+                                If the model's top five outputs with the highest confidence include a crop from this list, the plant is identified as that crop. Any plant not labeled as a crop is then classified as a weed.
                             </p>
                         </div>
 
@@ -116,10 +118,9 @@
                         <div class="text-content">
                             <h3>Localization</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                Once all weeds are identified, their coordinates are sent to the weeder arm for removal. Pixel coordinates of the weed centers, 
+                                calculated during segmentation, are converted to real-world coordinates using Intel's <a href="https://www.intelrealsense.com/depth-camera-d435/" target="_blank" rel="noopener noreferrer">Depth Camera D435 module</a> 
+                                with its built-in depth sensor. This achieves &le; 1 cm accuracy in both x and y directions.
                             </p>
                         </div>
                     </article>
