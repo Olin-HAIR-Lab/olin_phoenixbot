@@ -63,6 +63,43 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+
+                <pre class="mermaid" style="padding: 3em 0 0 0;">
+                    graph LR;
+
+                    %% Define Blocks
+                    A[Intel D435i Camera]
+                    B[Segmentation]
+                    C[Classification]
+                    D[Localization]
+                    E([RGB Frame])
+                    F([Real-World coordinates])
+                    G([WeedInfo ROS Topic])
+                    H([Segmented Plant Images])
+                    I([Depth Frame])
+                    J([Plant Species])
+                    K{Is it a weed?}
+                    L([Pixel Coordinates])
+
+                    %% Image Data Processes
+                    A --> E
+                    E --> B
+                    B --> H
+                    B --> L
+                    H --> C
+                    C --> J
+                    J --> K
+                    K --> |Yes| G
+                    K --> |No| H
+
+
+                    %% Depth Data Processes
+                    A --> I
+                    L --> D
+                    I --> D
+                    D --> F
+                    F --> K
+                </pre>
             </div>
         </section>
 
@@ -168,6 +205,9 @@
     </div>
 
     <!-- Scripts -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
