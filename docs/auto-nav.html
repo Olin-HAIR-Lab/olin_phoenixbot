@@ -61,10 +61,39 @@
                         allowfullscreen>
                     </iframe>
                 </div>
+                <pre class="mermaid" style="padding: 3em 0 0 0;">
+                    graph LR;
+        
+                    subgraph Crop Follow
+                    A([Wait]) 
+                    B([Crop Follow]) 
+                    C([Stop]) 
+                    D([Drive Slow])
+                    end
+        
+                    subgraph Manual Control
+                    E([Manual])
+                    end
+        
+                    E --> |Toggle Crop Follow| A
+                    A --> |Aligned| B
+                    B --> |Not Aligned / Danger| C
+                    B --> |Safe| B
+                    B --> |Warning| D
+                    C --> |Aligned & Warning| D
+                    C --> |Aligned & Safe| B
+                    D --> |Safe| B
+                    D --> |Not Aligned or Danger| C
+        
+                    A --> |Toggle Manual| E
+                    B --> |Toggle Manual| E
+                    C --> |Toggle Manual| E
+                    D --> |Toggle Manual| E
+                </pre>
             </div>
         </section>
 
-
+        
         <section class="wrapper style1">
             <div class="container">
                 <div id="content">
@@ -143,6 +172,9 @@
 </div>
 
     <!-- Scripts -->
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+      </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
