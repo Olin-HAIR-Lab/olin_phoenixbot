@@ -102,7 +102,6 @@
                                 If the model's top five outputs with the highest confidence include a crop from this list, the plant is identified as that crop. Any plant not labeled as a crop is then classified as a weed.
                             </p>
                         </div>
-
                         <span class="image featured left"><img src="images/img-placeholder.png" alt="" /></span>
                     </article>
                 </div>
@@ -122,6 +121,26 @@
                                 with its built-in depth sensor. This achieves &le; 1 cm accuracy in both x and y directions.
                             </p>
                         </div>
+                    </article>
+                </div>
+        </section>
+
+        <section class="wrapper style1">
+            <div class="container">
+                <div id="content">
+                    <!-- Content -->
+                    <article class="flex-container">
+                        
+                        <div class="text-content">
+                            <h3>Evaluation</h3>
+                            <p>
+                                To validate the segmentation pipeline, precision, recall, and mean IOU values of the predicted bounding boxes were calculated and compared to the ground truth. 
+                                The pipeline showed high precision but low recall due to small weeds being filtered out during denoising. IOU values were generally high for plants not filtered out, 
+                                but the clustering algorithm sometimes grouped close plants together, reducing IOU. For the classification pipeline, a confusion matrix for lettuce and weeds showed an 
+                                accuracy of 0.88, precision of 0.8, and recall of 0.7.
+                            </p>
+                        </div>
+                        <span class="image featured left"><img src="images/subsystem-diagram/plant-id-4.png" alt="" /></span>
                     </article>
                 </div>
         </section>
