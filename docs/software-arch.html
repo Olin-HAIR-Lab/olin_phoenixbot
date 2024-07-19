@@ -53,19 +53,21 @@
             <div class="container">
                 <header class="major">
                     <h2>Software Architecture</h2>
-                    <p>Phoenixbot's software system consists of various ROS2 nodes and serial connections that communicate with each other. The system is divided into two subsystems: Weeder and Navigator.</p>
+                    <p>The software system is divided into two main subsystems: Weeder and Navigator.</p>
                 </header>
             </div>
             <div class="img-container" style="width: 55%;">
                 <img src="images/system-diagram/weeder-arch.png" width="100%" alt="img">
-                <p style="text-align: left;">
-                    <b>Weeder:</b> This subsystem identifies weeds in camera frames and uses the weeder arm to remove them.
+                <p style="text-align: left; padding: 0 0 2em 0;">
+                    <b>Weeder:</b> The weeder subsystem identifies weeds in camera frames and uses the weeder arm to remove them. The weed_detector is part of the 
+                    <a href="https://github.com/Olin-HAIR-Lab/phoenixbot_weed_detection" target="_blank">Phoenixbot Weed ID</a> package and is responsible for sending real-life coordinates of weeds to the weeder arm. weeder_planner, joystick_teleop, and motor_controller
+                    are part of the <a href="https://github.com/Olin-HAIR-Lab/phoenixbot_weeding" target="_blank">Phoenixbot Weeding</a> package and is responsible for moving the weeder arm to the correct coordinates and removing the weed.
                 </p>
             </div>
             <div class="img-container" style="width: 55%;">
                 <img src="images/system-diagram/navigator-arch.png" width="100%" alt="img">
-                <p style="text-align: left;">
-                    <b>Navigator:</b> Responsible for autonomous crop following, this subsystem communicates with various sensors and inputs that influence the robot's movement.
+                <p style="text-align: left; padding: 0 0 2em 0;">
+                    <b>Navigator:</b> The navigator subsystem handles 
                 </p>
             </div>
         </section>
