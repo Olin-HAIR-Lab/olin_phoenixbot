@@ -1871,11 +1871,13 @@ header.model {
 }
 
 header.model h2 {
+    text-shadow: 2px 2px white;
     font-size: 2.25em;
 }
 
 
 header.model p {
+    text-shadow: 2px 2px white;
     color: inherit;
     font-weight: 600;
     position: relative;
