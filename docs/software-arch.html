@@ -67,7 +67,10 @@
             <div class="img-container" style="width: 55%;">
                 <img src="images/system-diagram/navigator-arch.png" width="100%" alt="img">
                 <p style="text-align: left; padding: 0 0 2em 0;">
-                    <b>Navigator:</b> The navigator subsystem handles 
+                    <b>Navigator:</b> The navigator subsystem handles everything regarding the robot's movement. The amiga_ros2_control node 
+                    is part of the <a href="https://github.com/Olin-HAIR-Lab/phoenixbot_amiga_control/tree/main/amiga_ros2_control" target="_blank">Amiga Ros2 Control</a> package and it communicates with the robot to set its velocity. 
+                    The remaining nodes are all part of the <a href="https://github.com/Olin-HAIR-Lab/phoenixbot_navigation" target="_blank">Phoenixbot Navigation</a> packages and is responsible for processes user input and sensor readings 
+                    to determine which state the robot should be in. 
                 </p>
             </div>
         </section>
