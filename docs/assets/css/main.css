@@ -2457,6 +2457,9 @@ button.small,
 /* Header */
 
 #header {
+    z-index: 999;
+    position: sticky;
+    top: 0;
     text-align: center;
     padding: 0 0 0 0;
     background-color: #fff;
@@ -2478,6 +2481,8 @@ button.small,
 }
 
 #nav {
+    position: sticky;
+    top: 0;
     cursor: default;
     background-color: #333;
     background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("images/bg01.png");
@@ -2485,6 +2490,7 @@ button.small,
     background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("images/bg01.png");
     background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("images/bg01.png");
     padding: 0;
+
 }
 
 #nav:after {
@@ -2497,6 +2503,8 @@ button.small,
 }
 
 #nav>ul {
+    position: sticky;
+    top: 0;
     margin: 0;
 }
 
@@ -2575,9 +2583,11 @@ button.small,
     text-align: center;
     box-shadow: 0 1em 1em 0 rgba(0, 0, 0, 0.5);
     list-style: none;
+    
 }
 
 .dropotron>li {
+
     line-height: 2em;
     padding: 0 1.1em 0 1em;
 }
