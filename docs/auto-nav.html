@@ -103,11 +103,11 @@
                         <div class="text-content">
                             <h3>Crop Row Following</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
-                            </p>
+                                The robot uses an Intel Realsense camera and OpenCV to maintain a straight path down a crop row. 
+                                It isolates plants using HSV thresholding to mask non-green pixels, then crops the image to reduce error and computation time. 
+                                Crop row lines are determined by analyzing green pixel ratios and smoothing peaks to identify rows. Assuming three crop rows, 
+                                the system tries to minimize squared distances to the lines and calculates the vanishing point. This point sets the robot's heading angle. 
+                                A PID controller converts this angle into angular velocity, adjusting the linear velocity proportionally to ensure precise navigation.
                         </div>
                     </article>
                 </div>
