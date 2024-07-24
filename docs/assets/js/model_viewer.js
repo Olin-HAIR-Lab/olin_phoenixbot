@@ -39,13 +39,13 @@ let planeMaterial = new THREE.ShadowMaterial({ opacity: 0.5 });
 let plane = new THREE.Mesh(planeGeometry, planeMaterial);
 plane.rotation.x = -65 * (Math.PI / 180);
 plane.position.x = -5;
-plane.position.y = -0.3;
+plane.position.y = 0;
 plane.receiveShadow = true; // Plane can receive shadows
 scene.add(plane);
 
 // Load GLTF model
 let loader = new GLTFLoader();
-loader.load('models/phoenixbot.gltf', function(gltf) {
+loader.load('models/Phoenixbot_Full.gltf', function(gltf) {
   gltf.scene.traverse(function(node) {
     if (node.isMesh) {
       node.castShadow = true; // Enable shadow casting for the model
@@ -53,12 +53,16 @@ loader.load('models/phoenixbot.gltf', function(gltf) {
     }
   });
 
-  gltf.scene.rotation.x = -65 * (Math.PI / 180);
+  // Scale the model down
+  gltf.scene.scale.set(1.5,1.5,1.5); // Adjust the scale factor as needed
+
+  gltf.scene.rotation.x = 25 * (Math.PI / 180);
+  // gltf.scene.rotation.y = 10 * (Math.PI/180)
   scene.add(gltf.scene);
 
   function animate() {
     requestAnimationFrame(animate);
-    gltf.scene.rotation.z -= 0.005;
+    gltf.scene.rotation.y -= 0.005;
     renderer.render(scene, camera);
   }
   animate();
