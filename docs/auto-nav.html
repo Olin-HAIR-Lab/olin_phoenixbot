@@ -51,7 +51,7 @@
 
         <!-- Gigantic Heading -->
         <section class="wrapper style2">
-            <div class="container">
+            <div class="container caption">
                 <header class="major">
                     <h2>Autonomous Navigation</h2>
                     <p></p>
@@ -65,7 +65,7 @@
                     graph LR;
         
                     subgraph Crop Follow
-                    A([Wait]) 
+                    %% A([Wait]) 
                     B([Crop Follow]) 
                     C([Stop]) 
                     D([Drive Slow])
@@ -75,21 +75,22 @@
                     E([Manual])
                     end
         
-                    E --> |Toggle Crop Follow| A
-                    A --> |Aligned| B
-                    B --> |Not Aligned / Danger| C
+                    E --> |Toggle Crop Follow| B
+                    %% A --> |Aligned| B
+                    B --> |Danger| C
                     B --> |Safe| B
                     B --> |Warning| D
-                    C --> |Aligned & Warning| D
-                    C --> |Aligned & Safe| B
+                    C --> |Warning| D
+                    C --> |Safe| B
                     D --> |Safe| B
-                    D --> |Not Aligned or Danger| C
+                    D --> |Danger| C
         
-                    A --> |Toggle Manual| E
+                    %% A --> |Toggle Manual| E
                     B --> |Toggle Manual| E
                     C --> |Toggle Manual| E
                     D --> |Toggle Manual| E
                 </pre>
+                <p>State machine diagram for different navigator states</p>
             </div>
         </section>
 
@@ -161,10 +162,9 @@
                         <div class="text-content">
                             <h3>Evaluation</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                Using a 30 second video running at 30 frames per second and running each frame through our 
+                                line detector at 320x240 resolution we got all three crop lines in 904/924 frames or 97.8% of the frames. 
+                                We can also look at a cloud of calculated vanishing points ...
                             </p>
                         </div>
 
