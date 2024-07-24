@@ -2732,7 +2732,9 @@ button.small,
 }
 
 .wrapper.style3 {
+    background: #fff;
     background-image: url("../../images/crop-row-70p.png");
+    background-repeat: no-repeat;
 }
 
 .wrapper.style3 .button {
