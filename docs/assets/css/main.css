@@ -14,11 +14,13 @@
 }
 
 .img-container{
+    width: 1080px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .img-container p{
+    margin: 0;
     padding: 0.2em;
 }
 
@@ -72,13 +74,15 @@
 .modal-content {
     background-color: #fff;
     margin: 15% auto;
-    padding: 20px;
+    padding: 20px 0 0 0;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 1200px;
+    width: auto;
+    max-width: 60%;
     display: flex;
+    flex-direction: column;
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
+    border-radius: 10px;
 }
 
 .modal-content img {
@@ -86,7 +90,6 @@
     max-width: 100%;
     height: auto;
     border-radius: 10px;
-    margin-right: 20px; /* Space between image and description */
 }
 
 .modal-content .description {
