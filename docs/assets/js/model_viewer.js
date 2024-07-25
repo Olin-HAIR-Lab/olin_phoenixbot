@@ -57,12 +57,12 @@ loader.load('models/Phoenixbot_Full.gltf', function(gltf) {
   gltf.scene.scale.set(1.5,1.5,1.5); // Adjust the scale factor as needed
 
   gltf.scene.rotation.x = 25 * (Math.PI / 180);
-  // gltf.scene.rotation.y = 10 * (Math.PI/180)
+  gltf.scene.rotation.y = -240 * (Math.PI/180);
   scene.add(gltf.scene);
 
   function animate() {
     requestAnimationFrame(animate);
-    gltf.scene.rotation.y -= 0.005;
+    gltf.scene.rotation.y -= 0.004;
     renderer.render(scene, camera);
   }
   animate();
