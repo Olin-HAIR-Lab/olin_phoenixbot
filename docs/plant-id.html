@@ -155,7 +155,7 @@
                             <p>
                                 Once all weeds are identified, their coordinates are sent to the weeder arm for removal. Pixel coordinates of the weed centers, 
                                 calculated during segmentation, are converted to real-world coordinates using Intel's <a href="https://www.intelrealsense.com/depth-camera-d435/" target="_blank" rel="noopener noreferrer">Depth Camera D435 module</a> 
-                                with its built-in depth sensor. This achieves &le; 1 cm accuracy in both x and y directions.
+                                with its built-in depth sensor. This achieves <b>&le; 15 mm </b>accuracy in both x and y directions.
                             </p>
                         </div>
                     </article>
@@ -172,9 +172,8 @@
                             <h3>Evaluation</h3>
                             <p>
                                 To validate the segmentation pipeline, precision, recall, and mean IOU values of the predicted bounding boxes were calculated and compared to the ground truth. 
-                                The pipeline showed high precision but low recall due to small weeds being filtered out during denoising. IOU values were generally high for plants not filtered out, 
-                                but the clustering algorithm sometimes grouped close plants together, reducing IOU. For the classification pipeline, a confusion matrix for lettuce and weeds showed an 
-                                accuracy of 0.88, precision of 0.91, and recall of 0.85.
+                                The segmentation pipeline showed an average <b>precision of 0.69, recall of 0.70, and IoU of 0.68</b>. For the classification pipeline, a confusion matrix for lettuce and weeds 
+                                was calaulated. The result showed an <b>accuracy of 0.88, precision of 0.91, and recall of 0.85</b>.
                             </p>
                         </div>
                         <span class="image featured left"><img src="images/subsystem-diagram/plant-id-4.png" alt="" /></span>
