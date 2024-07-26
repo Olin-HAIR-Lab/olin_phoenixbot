@@ -78,10 +78,10 @@
                         <div class="text-content">
                             <h3>Weeder Arm</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                The mechanical weeder removes weeds identified by the plant identification system. To ensure both precision and efficiency, a delta arm was chosen due to its high-speed and precise operation.
+                                The delta manipulator comprises of a fixed base plate and a mobile end-effector platform connected by three link arms. Each arm consists of a bicep and a forearm, 
+                                with biceps connected to the base via revolute joints. Three stepper motors spaced at 120&deg; drive the biceps.
+                                The forearms are connected to the biceps and the end effector platform via spherical joints, ensuring parallel alignment with the base.
                             </p>
                         </div>
                     </article>
@@ -97,10 +97,9 @@
                         <div class="text-content">
                             <h3>Weeder Arm: Software</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                The weeder arm can operate in two modes: autonomous and manual. In autonomous mode, the system receives the cartesian coordiantes of weeds, 
+                                plans an appropriate path, and commands the arm to move accordingly. The arm then uses the claw to remove the weed before returning to home position. In manual mode, the system allows for joystick control, enabling the user to direct the arm's movements. 
+                                Motor commands are sent to an Arduino, which executes them to control the motors. This system ensures efficient and precise weeding in both autonomous and manual operations.
                             </p>
                         </div>
 
