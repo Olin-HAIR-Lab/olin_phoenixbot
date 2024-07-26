@@ -76,12 +76,11 @@
                     <article class="flex-container">
                         <span class="image featured right"><img src="images/subsystem-diagram/aerialbot-1.png" alt="" /></span>
                         <div class="text-content">
-                            <h3>Topic 1</h3>
+                            <h3>Aerialbot Hardware Architecture</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                This drone system is built around a Pixhawk 6C flight controller, with power distributed from a Li-Po battery to the motors via ESCs. 
+                                It integrates a GPS module for navigation, telemetry for ground control communication, and a companion computer with a depth camera for advanced navigation. 
+                                This setup enables both remote and autonomous operation, combining manual control through a FlySky transmitter with real-time data processing for enhanced autonomy.
                             </p>
                         </div>
                     </article>
@@ -95,12 +94,11 @@
                     <article class="flex-container">
                         
                         <div class="text-content">
-                            <h3>Topic 2</h3>
+                            <h3>Aerialbot Software Architecture</h3>
                             <p>
-                                Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-                                Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-                                Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-                                consequat etiam lorem ipsum dolor sit amet nullam.
+                                The main purpose of this drone system currently is to record locally and stream video data real time to a ground control station. 
+                                We do this by using the GStreamer module over wifi to send low quality video data. In the future this drone system will be able to map farm layouts, 
+                                create paths for the ground unit, and figure out which crop beds need weeding the most.
                             </p>
                         </div>
 
